@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSUD - Survei Kepuasan Masyarakat</title>
+
+<!-- ICON & GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- CHART JS -->
+<img src="logo"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#222}
+
+/* ================= HEADER ================= */
+.top-header{
+    padding:8px 30px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+}
+.logo-area{display:flex;align-items:center;gap:10px}
+.logo-circle{
+    width:45px;height:45px;border-radius:50%;
+    background:#008cff;
+}
+.top-header h3{font-size:18px;font-weight:600}
+
+.navbar{
+    display:flex;
+    gap:25px;
+    font-size:14px;
+}
+.navbar a{
+    text-decoration:none;
+    color:#444;
+}
+.navbar a.active,.navbar a:hover{
+    color:#008cff;
+    font-weight:600;
+}
+
+/* ================= SLIDER ================= */
+.slider{
+    width:100%;
+    background:#b8e9ff;
+    padding:25px;
+    margin-top:5px;
+}
+
+.slide-container{
+    background:#d2f1ff;
+    border-radius:10px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left-info{
+    width:55%;
+}
+
+.left-info h2{
+    font-size:28px;
+    font-weight:700;
+}
+.left-info span{
+    font-size:14px
+}
+
+.score-box{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    width:70%;
+}
+
+.score-title{font-size:18px}
+.score-value{
+    font-size:45px;
+    color:#008cff;
+    font-weight:800;
+}
+.score-note{
+    font-size:18px;
+    color:green;
+    font-weight:700
+}
+
+/* ================= RIGHT GRAPH ================= */
+.right-info{
+    width:40%;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.right-info h4{text-align:center;margin-bottom:10px}
+
+/* ================= FOOTER ================= */
+.footer{
+    margin-top:30px;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#eef3ff;
+    border-top:1px solid #ccc;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .slide-container{
+        flex-direction:column;
+        gap:20px;
+    }
+    .left-info,.right-info{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<section class="top-header">
+    <div class="logo-area">
+        <div class="logo-circle"></div>
+        <div>
+            <h3>RSUD Drs. H. Amri Tambunan</h3>
+        </div>
+    </div>
+
+    <div class="navbar">
+  </ul><a class="active" a href="beranda2.html">Beranda</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="pelayanan.html">Layanan</a>
+        <a href="dokter.html">Dokter</a>
+        <a href="berita.html">Berita</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="skm.html">SKM</a>
+        <a href="diklatit.html">Diklatit</a>
+        <a href="ona_integritas.html">ona Integritas</a>
+        <a href="ppid.html">PPID</a>
+        <a href="kontak.html">Contact Us</a>
+    </div>
+</section>
+
+<!-- ================= SLIDER ================= -->
+<section class="slider">
+    <div class="slide-container">
+        
+        <!-- LEFT CONTENT -->
+<!-- ================= PROFIL RS ================= -->
+<section class="profil">
+    <div class="profil-container">
+        <h2 class="profil-title">Profil RSUD Drs. H. Amri Tambunan</h2>
+
+        <p class="profil-text">
+            RSUD Drs. H. Amri Tambunan merupakan rumah sakit milik Pemerintah Kabupaten Deli Serdang 
+            yang berkomitmen memberikan pelayanan kesehatan berkualitas, bermutu, aman, dan 
+            berorientasi pada kepuasan masyarakat. Rumah sakit ini menjadi rujukan utama masyarakat 
+            dengan pelayanan komprehensif, dokter profesional, fasilitas lengkap, dan teknologi modern.
+        </p>
+
+        <div class="profil-grid">
+            <div class="profil-box">
+                <h4>Visi</h4>
+                <p>
+                    “Mewujudkan Rumah Sakit yang Profesional, Humanis, dan Berkualitas dalam 
+                    memberikan pelayanan kesehatan kepada masyarakat.”
+                </p>
+            </div>
+
+            <div class="profil-box">
+                <h4>Misi</h4>
+                <ul>
+                    <li>Meningkatkan mutu pelayanan kesehatan.</li>
+                    <li>Mewujudkan pelayanan yang cepat, tepat, dan ramah.</li>
+                    <li>Meningkatkan profesionalisme tenaga kesehatan.</li>
+                    <li>Menyediakan sarana dan prasarana yang memadai.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<section class="footer">
+    <div>🌤 27°C | Berawan</div>
+    <div>
+        📞 061-7952068 | 📱 0811 6591 949 |
+        📧 rsudhat@deliserdangkab.go.id
+    </div>
+</section>
+
+<script>
+// ===== Chart Data =====
+const ctx = document.getElementById("ikmChart");
+
+new Chart(ctx,{
+    type:"bar",
+    data:{
+        labels:["TW I","TW II"],
+        datasets:[{
+            label:"Nilai IKM",
+            data:[95.50,88.00],
+            backgroundColor:["#b88a00","#b88a00"]
+        }]
+    },
+    options:{
+        scales:{
+            y:{beginAtZero:true}
+        }
+    }
+});
+</script>
+
+</body>
+</html>

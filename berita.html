@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RSUD - Survei Kepuasan Masyarakat</title>
+
+<!-- ICON & GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<!-- CHART JS -->
+<img src="logo"></script>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#fff;color:#222}
+
+/* ================= HEADER ================= */
+.top-header{
+    padding:8px 30px;
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #ddd;
+}
+.logo-area{display:flex;align-items:center;gap:10px}
+.logo-circle{
+    width:45px;height:45px;border-radius:50%;
+    background:#008cff;
+}
+.top-header h3{font-size:18px;font-weight:600}
+
+.navbar{
+    display:flex;
+    gap:25px;
+    font-size:14px;
+}
+.navbar a{
+    text-decoration:none;
+    color:#444;
+}
+.navbar a.active,.navbar a:hover{
+    color:#008cff;
+    font-weight:600;
+}
+
+/* ================= SLIDER ================= */
+.slider{
+    width:100%;
+    background:#b8e9ff;
+    padding:25px;
+    margin-top:5px;
+}
+
+.slide-container{
+    background:#d2f1ff;
+    border-radius:10px;
+    padding:25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left-info{
+    width:55%;
+}
+
+.left-info h2{
+    font-size:28px;
+    font-weight:700;
+}
+.left-info span{
+    font-size:14px
+}
+
+.score-box{
+    margin-top:20px;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+    width:70%;
+}
+
+.score-title{font-size:18px}
+.score-value{
+    font-size:45px;
+    color:#008cff;
+    font-weight:800;
+}
+.score-note{
+    font-size:18px;
+    color:green;
+    font-weight:700
+}
+
+/* ================= RIGHT GRAPH ================= */
+.right-info{
+    width:40%;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.right-info h4{text-align:center;margin-bottom:10px}
+
+/* ================= FOOTER ================= */
+.footer{
+    margin-top:30px;
+    padding:10px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#eef3ff;
+    border-top:1px solid #ccc;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .slide-container{
+        flex-direction:column;
+        gap:20px;
+    }
+    .left-info,.right-info{width:100%}
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<section class="top-header">
+    <div class="logo-area">
+        <div class="logo-circle"></div>
+        <div>
+            <h3>RSUD Drs. H. Amri Tambunan</h3>
+        </div>
+    </div>
+
+    <div class="navbar">
+  </ul><a class="active" a href="beranda2.html">Beranda</a>
+        <a href="tentang.html">Tentang Kami</a>
+        <a href="pelayanan.html">Layanan</a>
+        <a href="dokter.html">Dokter</a>
+        <a href="berita.html">Berita</a>
+        <a href="informasi.html">Informasi</a>
+        <a href="skm.html">SKM</a>
+        <a href="diklatit.html">Diklatit</a>
+        <a href="ona_integritas.html">ona Integritas</a>
+        <a href="ppid.html">PPID</a>
+        <a href="kontak.html">Contact Us</a>
+    </div>
+</section>
+
+<!-- ================= SLIDER ================= -->
+<section class="slider">
+    <div class="slide-container">
+        
+        <!-- LEFT CONTENT -->
+<!-- ================= PROFIL RS ================= -->
+<section class="profil">
+    <div class="profil-container">
+        <h2 class="profil-title">Artikel Kesehatan</h2>
+
+       <img src="data:image/webp;base64,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" class="banner">
+    </div>
+</section>
+
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<section class="footer">
+    <div>
+        📞 061-7952068 | 📱 0811 6591 949 |
+        📧 rsudhat@deliserdangkab.go.id
+    </div>
+</section>
+
+<script>
+// ===== Chart Data =====
+const ctx = document.getElementById("ikmChart");
+
+new Chart(ctx,{
+    type:"bar",
+    data:{
+        labels:["TW I","TW II"],
+        datasets:[{
+            label:"Nilai IKM",
+            data:[95.50,88.00],
+            backgroundColor:["#b88a00","#b88a00"]
+        }]
+    },
+    options:{
+        scales:{
+            y:{beginAtZero:true}
+        }
+    }
+});
+</script>
+
+</body>
+</html>
