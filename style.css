@@ -87,8 +87,8 @@ body {
     color: #008cff;
 }
 
-profil-box {
-  background-color: #f7f7f7;
+.profil-box {
+  background: linear-gradient(135deg, #f7f7f7 0%, #e9ecef 100%);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -174,7 +174,7 @@ profil-box {
     text-align: center;
     margin-bottom: 10px;
 }
-berita {
+.berita {
   padding: 50px 0;
   background-color: #f9f9f9;
 }
@@ -227,7 +227,7 @@ berita {
   object-fit: cover;
   border-radius: 10px;
 }
-layanan-box a {
+.layanan-box a {
   text-decoration: none;
   color: #222;
 }
@@ -261,6 +261,53 @@ layanan-box a {
     border-top: 1px solid #ccc;
 }
 
+/* ================= MAKLUMAT IMAGES ================= */
+.struktur-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.struktur-images img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.struktur-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.penghargaan-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.penghargaan-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.struktur-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.struktur-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
     .slide-container {
@@ -269,5 +316,9 @@ layanan-box a {
     }
     .left-info, .right-info {
         width: 100%;
+    }
+    .struktur-images {
+        flex-direction: column;
+        align-items: center;
     }
 }

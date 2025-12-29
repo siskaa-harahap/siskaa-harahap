@@ -3,68 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RSUD - Dokter</title>
+  <title>rsudhat.deliserdang</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Dokter Spesialis page styles */
+    .profil{ padding:32px 20px; }
+    .profil-container{ max-width:1100px; margin:0 auto; }
+    .profil-title{ font-size:26px; color:#0a4b76; margin-bottom:8px; }
+    .profil-text{ color:#444; margin-bottom:18px; line-height:1.6; }
+    .profil-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+    .profil-box{ background:#fff; border-radius:10px; padding:14px; box-shadow:0 8px 24px rgba(10,40,60,0.06); text-align:left; display:flex; flex-direction:column; }
+    .dokter-foto{ width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:12px; }
+    .dokter-name{ font-size:16px; margin:0 0 6px 0; color:#072c42; }
+    .dokter-specialty{ font-size:14px; color:#2b586f; margin:0 0 8px 0; }
+    .dokter-meta{ font-size:13px; color:#555; margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:8px; }
+    .btn-detail{ background:#007bff; color:#fff; padding:6px 10px; border-radius:6px; text-decoration:none; font-size:13px; }
+    @media (max-width:600px){ .dokter-foto{ height:160px; } }
+  </style>
 </head>
 <body>
   <!-- ================= HEADER ================= -->
-  <section class="top-header">
-    <div class="logo-area">
-      <img src="logo.png" alt="Logo RSUD" class="logo-image">
-      <div>
+    <section class="top-header">
+        <div class="logo-area">
+    <img src="logo.png" alt="Logo RSUD" class="logo-image">
+    <div>
         <h3>RSUD Drs. H. Amri Tambunan</h3>
-      </div>
     </div>
-    <div class="navbar">
-      <a href="beranda2.html">Beranda</a>
-      <div class="dropdown">
-        <a href="tentang.html">Tentang Kami</a>
-        <div class="dropdown-content">
-          <a href="tentang.html">Profil</a>
-          <a href="tentang.html">Visi dan Misi</a>
+</div>
+        <div class="navbar">
+            <a class="active" href="beranda2.html">Beranda</a>
+            <div class="dropdown">
+                <a href="#">Tentang Kami</a>
+                <div class="dropdown-content">
+                    <a href="tentang.html">Profil Rumah Sakit</a>
+                    <a href="sejarahrs.html">Sejarah Rumah Sakit</a>
+                    <a href="visimisi.html">Visi dan Misi</a>
+                    <a href="filosopilogo.html">Filosopi dan Makna Logo</a>
+                    <a href="strukturorganisasi.html">Struktur Organisasi</a>
+                    <a href="penghargaan.html">Sertifikat dan Penghargaan</a>
+                    <a href="maklumat.html">Maklumat Pelayanan</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Layanan</a>
+                <div class="dropdown-content">
+                    <a href="pelayanan.html">Standar Pelayanan</a>
+                    <a href="pelayanan-penunjang.html">Pelayanan Medis</a>
+                    <a href="pelayanan-penunjang.html">Pelayanan Penunjang</a>
+                    <a href="pelayanan.html">Pelayanan Unggulan</a>
+                    <a href="inovatif.html">Layanan Inovatif</a>
+                    <a href="alurpelayanan.html">Alur Pelayanan</a>
+                    <a href="alatmedis.html">Alat Medis</a>
+                    <a href="fasilitas.html">Fasilitas Lainnya</a>
+                    <a href="tarif.html">Tarif</a>
+                    <a href="jam-berkunjung.html">Jam Berkunjung</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Dokter</a>
+                <div class="dropdown-content">
+                    <a href="dokter.html">Dokter</a>
+                     <a href="dokter-spesialis.html">Dokter Spesialis</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Berita</a>
+                <div class="dropdown-content">
+                    <a href="berita.html">Artikel Kesehatan</a>
+                    <a href="brosur.html">Brosur</a>
+                    <a href="pegawai-teladan.html">Pegawai Teladan</a>
+                    <a href="poadcast.html">Podcast</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Informasi</a>
+                <div class="dropdown-content">
+                    <a href="spbe.html">SPBE</a>
+                    <a href="visimisi.html">SIPPN KemenPAN-RB</a>
+                    <a href="informasi.html">Informasi Billing</a>
+                    <a href="visimisi.html">Frequently Asked Questions (FAQ)</a>
+                    <a href="informasi.html">Indikator Mutu Rumah Sakit</a>
+                    <a href="https://keslan.kemkes.go.id/app/siranap/tempat_tidur?kode_rs=1212012&jenis=2&propinsi=12prop&kabkota=1212">Ketersediaan Tempat Tidur</a>
+                    <a href="https://portal.deliserdangkab.go.id/">Website Pemkab Deli Serdang</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">SKM</a>
+                <div class="dropdown-content">
+                    <a href="https://sukmadeli.deliserdangkab.go.id/survey_ikm/SUtNLUM5MUFVVg">Survei Kepuasan Masyarakat</a>
+                    <a href="visimisi.html">Laporan Survei Kepuasan Masyarakat</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Diklatlit</a>
+                <div class="dropdown-content">
+                    <a href="diklatit.html">Profil Diklat</a>
+                    <a href="visimisi.html">Sertifikat Diklatlit</a>
+                    <a href="diklatit.html">Sarana Prasarana Diklatlit</a>
+                    <a href="visimisi.html">SDM Diklatlit</a>
+                    <a href="diklatit.html">Kalender Diklat</a>
+                    <a href="visimisi.html">Laporan Evaluasi Kegiatan</a>
+                    <a href="diklatit.html">Komkordik</a>
+                    <a href="visimisi.html">Galeri</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Zona Integritas</a>
+                <div class="dropdown-content">
+                    <a href="ona_integritas.html">WBK/WBBM</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7d8K0-NcoDIAXe1cRv_hQ7AiEOxyII-bcDybjU_onSqu7pQ/viewform?pli=1">Whistle Blowing System</a>
+                    <a href="ona_integritas.html">Publikasi Zona Integritas</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">PPID</a>
+                <div class="dropdown-content">
+                    <a href="https://www.lapor.go.id/">Span Lapor</a>
+                    <a href="visimisi.html">Profil PPID</a>
+                    <a href="ppid.html">Visi Misi PPID</a>
+                    <a href="visimisi.html">Dasar Hukum</a>
+                    <a href="ppid.html">Struktur Organisasi</a>
+                    <a href="visimisi.html">Alur Permohonan Informasi</a>
+                    <a href="ppid.html">Alur Pengajuan Keberatan</a>
+                    <a href="visimisi.html">Alur Penyelesaian Sengketa</a>
+                    <a href="ppid.html">Formulir Permohonan Informasi</a>
+                    <a href="visimisi.html">Formulir Keberatan Informasi</a>
+                    <a href="ppid.html">SOP Pengaduan Masyarakat/a>
+                </div>
+            </div>
+            <a href="kontak.html">Contact Us</a>
         </div>
-      </div>
-      <a href="pelayanan.html">Layanan</a>
-      <div class="dropdown">
-        <a class="active" href="#">Dokter</a>
-        <div class="dropdown-content">
-          <a href="dokter.html">Dokter</a>
-          <a href="dokter-spesialis.html">Dokter Spesialis</a>
-        </div>
-      </div>
-      <a href="berita.html">Berita</a>
-      <a href="informasi.html">Informasi</a>
-      <a href="skm.html">SKM</a>
-      <a href="diklatit.html">Diklatit</a>
-      <a href="ona_integritas.html">Ona Integritas</a>
-      <a href="ppid.html">PPID</a>
-      <a href="kontak.html">Contact Us</a>
-    </div>
-  </section>
+    </section>
   <!-- ================= PROFIL DOKTER ================= -->
   <section class="profil">
     <div class="profil-container">
       <h2 class="profil-title">Dokter Umum</h2>
-      <p class="profil-text">Rumah Sakit HAT Memberikan pelayanan yang sangat penting bagi masyarakat menjadi hal yang bisa membuat rasa nyaman bagi para pasien dalam pengobatan</p>
       <div class="profil-grid">
-        <div class="profil-box">
-          <img src="dokter1.jpg" alt="dr. Desy Handayani AFS, M.Ked(OG), Sp.OG" class="dokter-foto">
-          <h3>dr. Frenky Jones Manurung, MARS, M.Ked(PD), Sp.PD-KHOM
-</h3>
-          <p>Hari: Senin & Kamis
-Waktu: 08:30 - 14:00</p>
-        </div>
-        <div class="profil-box">
-          <img src="dokter2.jpg" alt="dr. Asdina Ariesta Riani Damanik, M.Ked(OG), Sp.OG" class="dokter-foto">
-          <h3>Dr. Siti Aminah</h3>
-          <p>Spesialis Anak. Ahli dalam perawatan kesehatan anak dan remaja dengan pendekatan yang ramah.</p>
-        </div>
-        <div class="profil-box">
-          <img src="dokter3.jpg" alt="dr. Jekson Lubis, Sp.OG" class="dokter-foto">
-          <h3>Dr. Budi Prasetyo</h3>
-          <p>Spesialis Bedah. Spesialis dalam operasi umum dan bedah darurat dengan teknologi terkini.</p>
-        </div>
+        <article class="profil-box" aria-labelledby="sp-1">
+          <img src="dokter1.jpg" alt="Dr. Ahmad Santoso" class="dokter-foto">
+          <h3 id="sp-1" class="dokter-name">Dr. Ahmad Santoso</h3>
+          <p>Pengalaman lebih dari 15 tahun dalam penanganan penyakit jantung dan kardiovaskular.</p>
+          <div class="dokter-meta"><div>Selasa & Jumat</div><div>09:00 - 14:00</div></div>
+        </article>
+
+        <article class="profil-box" aria-labelledby="sp-2">
+          <img src="dokter2.jpg" alt="Dr. Siti Aminah" class="dokter-foto">
+          <h3 id="sp-2" class="dokter-name">Dr. Siti Aminah</h3>
+          <p>Ahli perawatan kesehatan anak dan remaja dengan pendekatan yang ramah.</p>
+          <div class="dokter-meta"><div>Senin & Kamis</div><div>08:30 - 13:00</div></div>
+                  </article>
+
+        <article class="profil-box" aria-labelledby="sp-3">
+          <img src="dokter3.jpg" alt="Dr. Budi Prasetyo" class="dokter-foto">
+          <h3 id="sp-3" class="dokter-name">Dr. Budi Prasetyo</h3>
+          <p>Spesialis dalam operasi umum dan bedah darurat dengan teknologi terkini.</p>
+          <div class="dokter-meta"><div>Rabu</div><div>10:00 - 16:00</div></div>
+                </article>
       </div>
     </div>
   </section>
@@ -74,10 +169,3 @@ Waktu: 08:30 - 14:00</p>
   </section>
 </body>
 </html>
-
-
-dr. Elizabeth Napitupulu, M. Ked. (Paru), Sp.P(K)-Onk
-dr. Elizabeth Napitupulu, M. Ked. (Paru), Sp.P(K)-Onk
-Hari: Senin & Kamis
-
-Waktu: 08:30 - 14:00

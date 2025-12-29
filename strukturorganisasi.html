@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>rsudhat.deliserdang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Dokter page styles */
-    .profil{ padding:32px 20px; }
-    .profil-container{ max-width:1100px; margin:0 auto; }
-    .profil-title{ font-size:26px; color:#0a4b76; margin-bottom:8px; }
-    .profil-text{ color:#444; margin-bottom:18px; line-height:1.6; }
-    .profil-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
-    .profil-box{ background:#fff; border-radius:10px; padding:14px; box-shadow:0 8px 24px rgba(10,40,60,0.06); text-align:left; display:flex; flex-direction:column; }
-    .dokter-foto{ width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:12px; }
-    .dokter-name{ font-size:16px; margin:0 0 6px 0; color:#072c42; }
-    .dokter-specialty{ font-size:14px; color:#2b586f; margin:0 0 8px 0; }
-    .dokter-meta{ font-size:13px; color:#555; margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:8px; }
-    .btn-detail{ background:#007bff; color:#fff; padding:6px 10px; border-radius:6px; text-decoration:none; font-size:13px; }
-    @media (max-width:600px){ .dokter-foto{ height:160px; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rsudhat.deliserdang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
     <section class="top-header">
         <div class="logo-area">
     <img src="logo.png" alt="Logo RSUD" class="logo-image">
@@ -39,10 +26,10 @@
                     <a href="tentang.html">Profil Rumah Sakit</a>
                     <a href="sejarahrs.html">Sejarah Rumah Sakit</a>
                     <a href="visimisi.html">Visi dan Misi</a>
-                    <a href="tentang.html">Filosopi dan Makna Logo</a>
-                    <a href="visimisi.html">Struktur Organisasi</a>
-                    <a href="tentang.html">Sertifikat dan Penghargaan</a>
-                    <a href="visimisi.html">Maklumat Pelayanan</a>
+                    <a href="filosopilogo.html">Filosopi dan Makna Logo</a>
+                    <a href="strukturorganisasi.html">Struktur Organisasi</a>
+                    <a href="penghargaan.html">Sertifikat dan Penghargaan</a>
+                    <a href="maklumat.html">Maklumat Pelayanan</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -91,7 +78,7 @@
              <div class="dropdown">
                 <a href="#">SKM</a>
                 <div class="dropdown-content">
-                    <a href="https://sukmadeli.deliserdangkab.go.id/survey_ikm/SUtNLUM5MUFVVg">Survei Kepuasan Masyarakat</a>
+                    <a href="skm.html">Survei Kepuasan Masyarakat</a>
                     <a href="visimisi.html">Laporan Survei Kepuasan Masyarakat</a>
                 </div>
             </div>
@@ -135,30 +122,58 @@
             <a href="kontak.html">Contact Us</a>
         </div>
     </section>
-  <!-- ================= SLIDER ================= -->
-    <section class="slider">
-        <div class="slide-container">
-            <!-- LEFT CONTENT -->
-            <div class="left-info">
-                <h2>SURVEI KEPUASAN MASYARAKAT</h2>
-                <span>Periode Januari s.d Juni (Semester I) Tahun 2025</span>
-                <div class="score-box">
-                    <div class="score-title">NILAI SKM</div>
-                    <div class="score-value">92,25</div>
-                    <div class="score-note">(Sangat Baik)</div>
-                </div>
-                <small> NB: Berdasarkan Permenpan RB Nomor 14 Tahun 2017 </small>
+   <!-- ================= PROFIL RS ================= -->
+  <section class="profil">
+    <div class="profil-box">
+      <div class="profil-grid">
+        <div class="profil-text">
+         <h4 style="text-align: center;">STRUKTUR ORGANISASI</h4>
+          <p>Berikut adalah struktur organisasi RSUD Drs. H. Amri Tambunan:</p>
+          <div class="struktur-images">
+            <div class="struktur-item">
+              <img src="struktur1.png" alt="Struktur Organisasi 1" style="width: 100%; max-width: 400px; margin: 10px; border-radius: 8px;">
+              <p>Struktur ORGANISASI</p>
             </div>
-            <!-- RIGHT CONTENT -->
-            <div class="right-info">
-                <h4>IKM Per Periode</h4>
-                <canvas id="ikmChart"></canvas>
+            <div class="struktur-item">
+              <img src="strukturdireksi.png" alt="Struktur Organisasi 2" style="width: 100%; max-width: 400px; margin: 10px; border-radius: 8px;">
+              <p>Direksi RSUD</p>
             </div>
+            <div class="struktur-item">
+              <img src="strukturadministrasi.png" alt="Struktur Organisasi 3" style="width: 100%; max-width: 400px; margin: 10px; border-radius: 8px;">
+              <p>Struktur Administrasi</p>
+            </div>
+            <div class="struktur-item">
+              <img src="strukturpelayanan.png" alt="Struktur Organisasi 2" style="width: 100%; max-width: 400px; margin: 10px; border-radius: 8px;">
+              <p>Struktur Pelayanan</p>
+            </div>
+            <div class="struktur-item">
+              <img src="struktursdm.png" alt="Struktur Organisasi 3" style="width: 100%; max-width: 400px; margin: 10px; border-radius: 8px;">
+              <p>Struktur SDM</p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
   <!-- ================= FOOTER ================= -->
   <section class="footer">
     <div>📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id</div>
   </section>
+  <style>
+  /* Profil section improvements */
+  .profil{ padding:30px; }
+  .profil-box{ background:#f9f9fb; padding:22px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); max-width:1100px; margin:0 auto; }
+  .profil-grid{ display:flex; gap:24px; align-items:flex-start; }
+  .profil-text{ flex:1; }
+  .profil-text h4{ margin:0 0 10px 0; font-size:20px; color:#0a4b76; }
+  .profil-text p{ color:#333; line-height:1.6; margin-bottom:12px; }
+  .profil-facts{ list-style:none; padding:0; margin:0 0 12px 0; }
+  .profil-facts li{ margin-bottom:6px; color:#444; }
+  .profil-cta a{ display:inline-block; background:#007bff; color:#fff; padding:8px 12px; border-radius:6px; text-decoration:none; font-size:14px; }
+  .profil-media{ width:420px; max-width:40%; }
+  .responsive-video{ position:relative; padding-top:56.25%; border-radius:8px; overflow:hidden; }
+  .responsive-video iframe{ position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+  @media (max-width:900px){ .profil-grid{ flex-direction:column; } .profil-media{ max-width:100%; width:100%; } }
+</style>
 </body>
 </html>

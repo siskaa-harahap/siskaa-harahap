@@ -1,29 +1,48 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>rsudhat.deliserdang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Dokter page styles */
-    .profil{ padding:32px 20px; }
-    .profil-container{ max-width:1100px; margin:0 auto; }
-    .profil-title{ font-size:26px; color:#0a4b76; margin-bottom:8px; }
-    .profil-text{ color:#444; margin-bottom:18px; line-height:1.6; }
-    .profil-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
-    .profil-box{ background:#fff; border-radius:10px; padding:14px; box-shadow:0 8px 24px rgba(10,40,60,0.06); text-align:left; display:flex; flex-direction:column; }
-    .dokter-foto{ width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:12px; }
-    .dokter-name{ font-size:16px; margin:0 0 6px 0; color:#072c42; }
-    .dokter-specialty{ font-size:14px; color:#2b586f; margin:0 0 8px 0; }
-    .dokter-meta{ font-size:13px; color:#555; margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:8px; }
-    .btn-detail{ background:#007bff; color:#fff; padding:6px 10px; border-radius:6px; text-decoration:none; font-size:13px; }
-    @media (max-width:600px){ .dokter-foto{ height:160px; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rsudhat.deliserdang</title>
+    <!-- ICON & GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- CHART JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+        body{background:#fff;color:#222}
+        /* ================= HEADER ================= */
+        .top-header{ padding:8px 30px; background:white; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ddd; }
+        .navbar{ display:flex; gap:25px; font-size:14px; }
+        .navbar a{ text-decoration:none; color:#444; }
+        .navbar a.active,.navbar a:hover{ color:#008cff; font-weight:600; }
+        /* ================= PELAYANAN UNGGULAN ================= */
+        .layanan-unggulan{ padding:25px; }
+        .layanan-container{ background:#f9f9f9; padding:25px; border-radius:10px; box-shadow:0px 0px 10px rgba(0,0,0,0.1); }
+        .layanan-title{ font-size:24px; font-weight:700; margin-bottom:10px; }
+        .layanan-grid{ display:flex; gap:20px; }
+        .layanan-box{ background:white; padding:20px; border-radius:10px; box-shadow:0px 0px 10px rgba(0,0,0,0.1); }
+        .layanan-box img{ width:100%; height:150px; object-fit:cover; border-radius:10px; }
+        .layanan-box p{ font-size:14px; margin-top:10px; }
+        /* make the whole image+caption area clickable */
+        .layanan-box a{ display:block; color:inherit; text-decoration:none; }
+        /* modal styles */
+        .modal{ position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,0.5); z-index:1000; }
+        .modal.open{ display:flex; }
+        .modal-content{ background:#fff; max-width:900px; width:90%; border-radius:8px; padding:18px; display:flex; gap:18px; align-items:flex-start; box-shadow:0 10px 30px rgba(0,0,0,0.2); }
+        .modal-content img{ width:280px; height:180px; object-fit:cover; border-radius:6px; }
+        .modal-info{ flex:1; }
+        .modal-info h3{ margin:0 0 8px 0; font-size:18px; }
+        .modal-info p{ margin:0; color:#333; line-height:1.4; }
+        .modal-close{ margin-left:8px; cursor:pointer; background:#f1f1f1; border:0; padding:6px 10px; border-radius:6px; }
+        @media (max-width:700px){ .modal-content{ flex-direction:column; align-items:center; } .modal-content img{ width:100%; height:180px; } }
+        /* ================= FOOTER ================= */
+        .footer{ margin-top:30px; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; background:#eef3ff; border-top:1px solid #ccc; }
+    </style>
 </head>
 <body>
-  <!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
     <section class="top-header">
         <div class="logo-area">
     <img src="logo.png" alt="Logo RSUD" class="logo-image">
@@ -39,10 +58,10 @@
                     <a href="tentang.html">Profil Rumah Sakit</a>
                     <a href="sejarahrs.html">Sejarah Rumah Sakit</a>
                     <a href="visimisi.html">Visi dan Misi</a>
-                    <a href="tentang.html">Filosopi dan Makna Logo</a>
-                    <a href="visimisi.html">Struktur Organisasi</a>
-                    <a href="tentang.html">Sertifikat dan Penghargaan</a>
-                    <a href="visimisi.html">Maklumat Pelayanan</a>
+                    <a href="filosopilogo.html">Filosopi dan Makna Logo</a>
+                    <a href="strukturorganisasi.html">Struktur Organisasi</a>
+                    <a href="penghargaan.html">Sertifikat dan Penghargaan</a>
+                    <a href="maklumat.html">Maklumat Pelayanan</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -53,7 +72,7 @@
                     <a href="pelayanan-penunjang.html">Pelayanan Penunjang</a>
                     <a href="pelayanan.html">Pelayanan Unggulan</a>
                     <a href="inovatif.html">Layanan Inovatif</a>
-                    <a href="alurpelayanan.html">Alur Pelayanan</a>
+                    <a href="alatmedis.html">Alur Pelayanan</a>
                     <a href="alatmedis.html">Alat Medis</a>
                     <a href="fasilitas.html">Fasilitas Lainnya</a>
                     <a href="tarif.html">Tarif</a>
@@ -80,7 +99,7 @@
                 <a href="#">Informasi</a>
                 <div class="dropdown-content">
                     <a href="spbe.html">SPBE</a>
-                    <a href="sippn.html">SIPPN KemenPAN-RB</a>
+                    <a href="visimisi.html">SIPPN KemenPAN-RB</a>
                     <a href="informasi.html">Informasi Billing</a>
                     <a href="https://rsudhat.deliserdangkab.go.id/frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a>
                     <a href="informasi.html">Indikator Mutu Rumah Sakit</a>
@@ -129,36 +148,28 @@
                     <a href="visimisi.html">Alur Penyelesaian Sengketa</a>
                     <a href="ppid.html">Formulir Permohonan Informasi</a>
                     <a href="visimisi.html">Formulir Keberatan Informasi</a>
-                    <a href="ppid.html">SOP Pengaduan Masyarakat</a>
+                    <a href="ppid.html">SOP Pengaduan Masyarakat/a>
                 </div>
             </div>
             <a href="kontak.html">Contact Us</a>
         </div>
     </section>
-  <!-- ================= SLIDER ================= -->
-    <section class="slider">
-        <div class="slide-container">
-            <!-- LEFT CONTENT -->
-            <div class="left-info">
-                <h2>SURVEI KEPUASAN MASYARAKAT</h2>
-                <span>Periode Januari s.d Juni (Semester I) Tahun 2025</span>
-                <div class="score-box">
-                    <div class="score-title">NILAI SKM</div>
-                    <div class="score-value">92,25</div>
-                    <div class="score-note">(Sangat Baik)</div>
-                </div>
-                <small> NB: Berdasarkan Permenpan RB Nomor 14 Tahun 2017 </small>
-            </div>
-            <!-- RIGHT CONTENT -->
-            <div class="right-info">
-                <h4>IKM Per Periode</h4>
-                <canvas id="ikmChart"></canvas>
-            </div>
-        </div>
+   <!-- ================= BROSUR ================= -->
+<section class="Brosur">
+  <div class="Brosur-container">
+    <div class="Brosur-grid">
+        <h3 style="text-align: center;" class="Brosur-title">Brosur RSUD Drs. H. Amri Tambunan</h3>
+      <div class="Brosur-box">
+        <a href="#" class="info-link" data-title="Kumpulan Brosur" data-desc="Kumpulan Brosur RSUD Drs. H. Amri Tambunan">
+          <img src="brosur.jpg" alt="BROSUR RSUD" class="img-fluid">
+          <a href="https://rsudhat.deliserdangkab.go.id/storage/pdfs/36KFPO23UaNTyrKigtcWiKRylWhTtcotgP8ac3oO.pdf" target="_blank" class="btn btn-primary"><p>Brosur</p></a>
+        </a>
+    </div>
+  </div>
+</section>
+    <!-- ================= FOOTER ================= -->
+    <section class="footer">
+        <div> 📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id </div>
     </section>
-  <!-- ================= FOOTER ================= -->
-  <section class="footer">
-    <div>📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id</div>
-  </section>
 </body>
 </html>

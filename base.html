@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>rsudhat.deliserdang</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* Dokter page styles */
-    .profil{ padding:32px 20px; }
-    .profil-container{ max-width:1100px; margin:0 auto; }
-    .profil-title{ font-size:26px; color:#0a4b76; margin-bottom:8px; }
-    .profil-text{ color:#444; margin-bottom:18px; line-height:1.6; }
-    .profil-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
-    .profil-box{ background:#fff; border-radius:10px; padding:14px; box-shadow:0 8px 24px rgba(10,40,60,0.06); text-align:left; display:flex; flex-direction:column; }
-    .dokter-foto{ width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:12px; }
-    .dokter-name{ font-size:16px; margin:0 0 6px 0; color:#072c42; }
-    .dokter-specialty{ font-size:14px; color:#2b586f; margin:0 0 8px 0; }
-    .dokter-meta{ font-size:13px; color:#555; margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:8px; }
-    .btn-detail{ background:#007bff; color:#fff; padding:6px 10px; border-radius:6px; text-decoration:none; font-size:13px; }
-    @media (max-width:600px){ .dokter-foto{ height:160px; } }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rsudhat.deliserdang</title>
+    <!-- ICON & GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- CHART JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+        body{background:#fff;color:#222}
+        /* ================= HEADER ================= */
+        .top-header{ padding:8px 30px; background:white; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #ddd; }
+        .navbar{ display:flex; gap:25px; font-size:14px; }
+        .navbar a{ text-decoration:none; color:#444; }
+        .navbar a.active,.navbar a:hover{ color:#008cff; font-weight:600; }
+        .dropdown { position: relative; display: inline-block; }
+        .dropdown-content { display: none; position: absolute; background-color: #f9f9f9; min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; }
+        .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
+        .dropdown-content a:hover { background-color: #f1f1f1; }
+        .dropdown:hover .dropdown-content { display: block; }
+        /* ================= FOOTER ================= */
+        .footer{ margin-top:30px; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; background:#eef3ff; border-top:1px solid #ccc; width:100%; }
+    </style>
 </head>
 <body>
-  <!-- ================= HEADER ================= -->
+    <!-- ================= HEADER ================= -->
     <section class="top-header">
         <div class="logo-area">
     <img src="logo.png" alt="Logo RSUD" class="logo-image">
@@ -39,10 +43,10 @@
                     <a href="tentang.html">Profil Rumah Sakit</a>
                     <a href="sejarahrs.html">Sejarah Rumah Sakit</a>
                     <a href="visimisi.html">Visi dan Misi</a>
-                    <a href="tentang.html">Filosopi dan Makna Logo</a>
-                    <a href="visimisi.html">Struktur Organisasi</a>
-                    <a href="tentang.html">Sertifikat dan Penghargaan</a>
-                    <a href="visimisi.html">Maklumat Pelayanan</a>
+                    <a href="filosopilogo.html">Filosopi dan Makna Logo</a>
+                    <a href="strukturorganisasi.html">Struktur Organisasi</a>
+                    <a href="penghargaan.html">Sertifikat dan Penghargaan</a>
+                    <a href="maklumat.html">Maklumat Pelayanan</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -53,7 +57,7 @@
                     <a href="pelayanan-penunjang.html">Pelayanan Penunjang</a>
                     <a href="pelayanan.html">Pelayanan Unggulan</a>
                     <a href="inovatif.html">Layanan Inovatif</a>
-                    <a href="alurpelayanan.html">Alur Pelayanan</a>
+                    <a href="tentang.html">Alur Pelayanan</a>
                     <a href="alatmedis.html">Alat Medis</a>
                     <a href="fasilitas.html">Fasilitas Lainnya</a>
                     <a href="tarif.html">Tarif</a>
@@ -82,9 +86,9 @@
                     <a href="spbe.html">SPBE</a>
                     <a href="sippn.html">SIPPN KemenPAN-RB</a>
                     <a href="informasi.html">Informasi Billing</a>
-                    <a href="https://rsudhat.deliserdangkab.go.id/frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a>
+                    <a href="visimisi.html">Frequently Asked Questions (FAQ)</a>
                     <a href="informasi.html">Indikator Mutu Rumah Sakit</a>
-                    <a href="https://keslan.kemkes.go.id/app/siranap/tempat_tidur?kode_rs=1212012&jenis=2&propinsi=12prop&kabkota=1212">Ketersediaan Tempat Tidur</a>
+                    <a href="visimisi.html">Ketersediaan Tempat Tidur</a>
                     <a href="https://portal.deliserdangkab.go.id/">Website Pemkab Deli Serdang</a>
                 </div>
             </div>
@@ -119,7 +123,7 @@
             <div class="dropdown">
                 <a href="#">PPID</a>
                 <div class="dropdown-content">
-                    <a href="https://www.lapor.go.id/">Span Lapor</a>
+                    <a href="ppid.html">Span Lapor</a>
                     <a href="visimisi.html">Profil PPID</a>
                     <a href="ppid.html">Visi Misi PPID</a>
                     <a href="visimisi.html">Dasar Hukum</a>
@@ -135,30 +139,13 @@
             <a href="kontak.html">Contact Us</a>
         </div>
     </section>
-  <!-- ================= SLIDER ================= -->
-    <section class="slider">
-        <div class="slide-container">
-            <!-- LEFT CONTENT -->
-            <div class="left-info">
-                <h2>SURVEI KEPUASAN MASYARAKAT</h2>
-                <span>Periode Januari s.d Juni (Semester I) Tahun 2025</span>
-                <div class="score-box">
-                    <div class="score-title">NILAI SKM</div>
-                    <div class="score-value">92,25</div>
-                    <div class="score-note">(Sangat Baik)</div>
-                </div>
-                <small> NB: Berdasarkan Permenpan RB Nomor 14 Tahun 2017 </small>
-            </div>
-            <!-- RIGHT CONTENT -->
-            <div class="right-info">
-                <h4>IKM Per Periode</h4>
-                <canvas id="ikmChart"></canvas>
-            </div>
-        </div>
+
+    <!-- CONTENT PLACEHOLDER -->
+    <div id="content-placeholder"></div>
+
+    <!-- ================= FOOTER ================= -->
+    <section class="footer">
+        <div>📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id</div>
     </section>
-  <!-- ================= FOOTER ================= -->
-  <section class="footer">
-    <div>📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id</div>
-  </section>
 </body>
 </html>

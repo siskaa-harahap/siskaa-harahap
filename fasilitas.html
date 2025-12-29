@@ -17,14 +17,22 @@
         .navbar{ display:flex; gap:25px; font-size:14px; }
         .navbar a{ text-decoration:none; color:#444; }
         .navbar a.active,.navbar a:hover{ color:#008cff; font-weight:600; }
-        /* ================= PELAYANAN UNGGULAN ================= */
-        .layanan-unggulan{ padding:25px; }
-        .layanan-container{ background:#f9f9f9; padding:25px; border-radius:10px; box-shadow:0px 0px 10px rgba(0,0,0,0.1); }
-        .layanan-title{ font-size:24px; font-weight:700; margin-bottom:10px; }
-        .layanan-grid{ display:flex; gap:20px; }
-        .layanan-box{ background:white; padding:20px; border-radius:10px; box-shadow:0px 0px 10px rgba(0,0,0,0.1); }
+        /* Profil section improvements */
+        .profil{ padding:30px; }
+        .profil-box{ background:#f9f9fb; padding:22px; border-radius:10px; box-shadow:0 6px 18px rgba(0,0,0,0.06); max-width:1100px; margin:0 auto; }
+        .profil-grid{ display:flex; gap:24px; align-items:flex-start; }
+        .profil-text{ flex:1; }
+        .profil-text h2{ margin:0 0 10px 0; font-size:24px; color:#0a4b76; }
+        .profil-text ul{ color:#333; line-height:1.6; margin-bottom:12px; }
+        .profil-media{ width:420px; max-width:40%; }
+        @media (max-width:900px){ .profil-grid{ flex-direction:column; } .profil-media{ max-width:100%; width:100%; } }
+        .layanan-grid{ display:flex; gap:20px; flex-wrap: wrap; justify-content: center; }
+        .layanan-box{ background:white; padding:20px; border-radius:10px; box-shadow:0px 4px 8px rgba(0,0,0,0.1); flex: 1 1 300px; max-width: 300px; transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; position: relative; }
+        .layanan-box:hover{ transform: translateY(-5px); box-shadow:0px 8px 16px rgba(0,0,0,0.2); }
         .layanan-box img{ width:100%; height:150px; object-fit:cover; border-radius:10px; }
-        .layanan-box p{ font-size:14px; margin-top:10px; }
+        .layanan-box p{ font-size:14px; margin-top:10px; font-weight: bold; }
+        .detail-link{ display: inline-block; margin-top: 10px; color: #008cff; text-decoration: underline; font-size: 12px; }
+        .available-badge{ position: absolute; top: 10px; right: 10px; background: green; color: white; padding: 5px 10px; border-radius: 5px; font-size: 12px; font-weight: bold; }
         /* make the whole image+caption area clickable */
         .layanan-box a{ display:block; color:inherit; text-decoration:none; }
         /* modal styles */
@@ -32,13 +40,14 @@
         .modal.open{ display:flex; }
         .modal-content{ background:#fff; max-width:900px; width:90%; border-radius:8px; padding:18px; display:flex; gap:18px; align-items:flex-start; box-shadow:0 10px 30px rgba(0,0,0,0.2); }
         .modal-content img{ width:280px; height:180px; object-fit:cover; border-radius:6px; }
-        .modal-info{ flex:1; }
-        .modal-info h3{ margin:0 0 8px 0; font-size:18px; }
-        .modal-info p{ margin:0; color:#333; line-height:1.4; }
+        .modal-info{ flex:1; padding: 10px; }
+        .modal-info h3{ margin:0 0 15px 0; font-size:20px; color:#0a4b76; }
+        .info-section{ margin-bottom: 10px; padding: 8px; background: #f9f9f9; border-radius: 5px; }
+        .info-section strong{ color: #333; }
         .modal-close{ margin-left:8px; cursor:pointer; background:#f1f1f1; border:0; padding:6px 10px; border-radius:6px; }
         @media (max-width:700px){ .modal-content{ flex-direction:column; align-items:center; } .modal-content img{ width:100%; height:180px; } }
         /* ================= FOOTER ================= */
-        .footer{ margin-top:30px; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; background:#eef3ff; border-top:1px solid #ccc; }
+        .footer{ margin-top:30px; padding:10px 20px; display:flex; justify-content:space-between; align-items:center; background:#eef3ff; border-top:1px solid #ccc; width:100%; }
     </style>
 </head>
 <body>
@@ -135,7 +144,7 @@
                     <a href="ona_integritas.html">Publikasi Zona Integritas</a>
                 </div>
             </div>
-             <div class="dropdown">
+            <div class="dropdown">
                 <a href="#">PPID</a>
                 <div class="dropdown-content">
                     <a href="https://www.lapor.go.id/">Span Lapor</a>
@@ -148,41 +157,61 @@
                     <a href="visimisi.html">Alur Penyelesaian Sengketa</a>
                     <a href="ppid.html">Formulir Permohonan Informasi</a>
                     <a href="visimisi.html">Formulir Keberatan Informasi</a>
-                    <a href="ppid.html">SOP Pengaduan Masyarakat</a>
+                    <a href="ppid.html">SOP Pengaduan Masyarakat/a>
                 </div>
             </div>
             <a href="kontak.html">Contact Us</a>
         </div>
     </section>
    <!-- ================= PELAYANAN UNGGULAN ================= -->
-<section class="layanan-unggulan">
-  <div class="layanan-container">
-    <h2 class="layanan-title">PELAYANAN UNGGULAN</h2>
-    <div class="layanan-grid">
-      <div class="layanan-box">
-        <a href="#" class="info-link" data-title="ENDOSCOPY CENTER" data-desc="Layanan Endoscopy Center untuk pemeriksaan saluran cerna menggunakan alat endoskopi." data-img="endos.jpg">
-          <img src="endos.jpg" alt="ENDOSCOPY CENTER">
-          <p>ENDOSCOPY CENTER</p>
-        </a>
-      </div>
-      <div class="layanan-box">
-        <a href="#" class="info-link" data-title="BEDAH UROLOGI" data-desc="Pelayanan bedah urologi meliputi penanganan penyakit saluran kemih dan reproduksi pria." data-img="uro.jpg">
-          <img src="uro.jpg" alt="BEDAH UROLOGI">
-          <p>BEDAH UROLOGI</p>
-        </a>
-      </div>
-      <div class="layanan-box">
-        <a href="#" class="info-link" data-title="BEDAH SARAF" data-desc="Pelayanan bedah saraf untuk penanganan gangguan sistem saraf pusat dan perifer." data-img="saraf.jpg">
-          <img src="saraf.jpg" alt="BEDAH SARAF">
-          <p>BEDAH SARAF</p>
-        </a>
+<section class="profil">
+    <div class="profil-box">
+      <div class="profil-grid">
+        <div class="profil-text">
+         <h2>DAFTAR FASILITAS</h2>
+         <ul style="list-style-type: disc; padding-left: 20px;">
+           <li>Ruang Tunggu yang nyaman</li>
+           <li>Kamar Pasien dengan fasilitas lengkap</li>
+           <li>Fasilitas Parkir yang luas</li>
+           <li>Kantin dan area makan</li>
+           <li>WiFi gratis</li>
+           <li>Ambulans 24 jam</li>
+         </ul>
+        </div>
+        <div class="profil-media">
+          <div class="layanan-grid">
+            <div class="layanan-box">
+              <a href="#" class="info-link" data-title="Ruang Tunggu" data-desc="Ruang tunggu yang nyaman untuk pasien dan keluarga." data-img="layanan2.jpg">
+                <img src="layanan2.jpg" alt="Ruang Tunggu">
+                <span class="available-badge">Tersedia</span>
+                <p>Ruang Tunggu</p>
+                <span class="detail-link">Lihat Detail</span>
+              </a>
+            </div>
+            <div class="layanan-box">
+              <a href="#" class="info-link" data-title="Kamar Pasien" data-desc="Kamar pasien dengan fasilitas lengkap." data-img="pasien.jpg">
+                <img src="pasien.jpg" alt="Kamar Pasien">
+                <span class="available-badge">Tersedia</span>
+                <p>Kamar Pasien</p>
+                <span class="detail-link">Lihat Detail</span>
+              </a>
+            </div>
+            <div class="layanan-box">
+              <a href="#" class="info-link" data-title="Fasilitas Parkir" data-desc="Area parkir yang luas dan aman." data-img="penunjang.jpg">
+                <img src="penunjang.jpg" alt="Fasilitas Parkir">
+                <span class="available-badge">Tersedia</span>
+                <p>Fasilitas Parkir</p>
+                <span class="detail-link">Lihat Detail</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
     <!-- ================= FOOTER ================= -->
     <section class="footer">
-        <div> 📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id </div>
+        <div>📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id</div>
     </section>
     <!-- modal untuk menampilkan informasi layanan -->
 <div id="info-modal" class="modal" role="dialog" aria-hidden="true">
@@ -190,7 +219,12 @@
     <img id="modal-img" src="" alt="">
     <div class="modal-info">
       <h3 id="modal-title"></h3>
-      <p id="modal-desc"></p>
+      <div class="info-section">
+        <strong>Status:</strong> <span id="modal-status">Tersedia</span>
+      </div>
+      <div class="info-section">
+        <strong>Deskripsi:</strong> <span id="modal-desc"></span>
+      </div>
     </div>
     <button id="modal-close" class="modal-close" aria-label="Tutup">Tutup</button>
   </div>
@@ -201,6 +235,7 @@
     const modal = document.getElementById('info-modal');
     const titleEl = document.getElementById('modal-title');
     const descEl = document.getElementById('modal-desc');
+    const statusEl = document.getElementById('modal-status');
     const imgEl = document.getElementById('modal-img');
     const closeBtn = document.getElementById('modal-close');
 
@@ -209,9 +244,11 @@
         e.preventDefault();
         const title = a.dataset.title || '';
         const desc = a.dataset.desc || '';
+        const status = a.dataset.status || 'Tersedia';
         const img = a.dataset.img || '';
         titleEl.textContent = title;
         descEl.textContent = desc;
+        statusEl.textContent = status;
         imgEl.src = img;
         imgEl.alt = title;
         modal.classList.add('open');
@@ -229,5 +266,3 @@
     });
   });
 </script>
-</body>
-</html>

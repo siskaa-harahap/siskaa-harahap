@@ -1,229 +1,166 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>RSUD - Survei Kepuasan Masyarakat</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rsudhat.deliserdang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-<!-- ICON & GOOGLE FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Visimisi improvements */
+      .profil{ padding:36px 20px; }
+      .profil-container{ max-width:1100px; margin:0 auto; display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap; }
+      .profil-title{ width:100%; font-size:26px; margin-bottom:12px; color:#0a4b76; text-align:left; }
+      .card{ background:#fff; border-radius:10px; padding:20px; box-shadow:0 6px 20px rgba(0,0,0,0.06); flex:1 1 420px; }
+      .card h4{ margin:0 0 10px 0; font-size:18px; color:#005587; }
+      .card p{ color:#333; line-height:1.7; margin:0 0 12px 0; }
+      .card ul{ margin:0; padding-left:18px; color:#444; }
+      .card ul li{ margin-bottom:8px; }
+      /* accent box for mission list */
+      .mission-list{ background:#f7fbff; border-radius:8px; padding:12px; }
+      @media (max-width:900px){ .profil-container{ flex-direction:column; } .profil-title{ text-align:center; } }
+    </style>
 
-<!-- CHART JS -->
-<img src="logo"></script>
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:#fff;color:#222}
-
-/* ================= HEADER ================= */
-.top-header{
-    padding:8px 30px;
-    background:white;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #ddd;
-}
-.logo-area{display:flex;align-items:center;gap:10px}
-.logo-circle{
-    width:45px;height:45px;border-radius:50%;
-    background:#008cff;
-}
-.top-header h3{font-size:18px;font-weight:600}
-
-.navbar{
-    display:flex;
-    gap:25px;
-    font-size:14px;
-}
-.navbar a{
-    text-decoration:none;
-    color:#444;
-}
-.navbar a.active,.navbar a:hover{
-    color:#008cff;
-    font-weight:600;
-}
-
-/* ================= SLIDER ================= */
-.slider{
-    width:100%;
-    background:#b8e9ff;
-    padding:25px;
-    margin-top:5px;
-}
-
-.slide-container{
-    background:#d2f1ff;
-    border-radius:10px;
-    padding:25px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.left-info{
-    width:55%;
-}
-
-.left-info h2{
-    font-size:28px;
-    font-weight:700;
-}
-.left-info span{
-    font-size:14px
-}
-
-.score-box{
-    margin-top:20px;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    text-align:center;
-    width:70%;
-}
-
-.score-title{font-size:18px}
-.score-value{
-    font-size:45px;
-    color:#008cff;
-    font-weight:800;
-}
-.score-note{
-    font-size:18px;
-    color:green;
-    font-weight:700
-}
-
-/* ================= RIGHT GRAPH ================= */
-.right-info{
-    width:40%;
-    background:white;
-    padding:20px;
-    border-radius:10px;
-}
-
-.right-info h4{text-align:center;margin-bottom:10px}
-
-/* ================= FOOTER ================= */
-.footer{
-    margin-top:30px;
-    padding:10px 20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:#eef3ff;
-    border-top:1px solid #ccc;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-    .slide-container{
-        flex-direction:column;
-        gap:20px;
-    }
-    .left-info,.right-info{width:100%}
-}
-</style>
 </head>
-
 <body>
-
-<!-- ================= HEADER ================= -->
-<section class="top-header">
-    <div class="logo-area">
-        <div class="logo-circle"></div>
-        <div>
-            <h3>RSUD Drs. H. Amri Tambunan</h3>
-        </div>
-    </div>
-
-    <div class="navbar">
-  </ul><a class="active" a href="beranda2.html">Beranda</a>
-        <a href="tentang.html">Tentang Kami</a>
-        <a href="layanan.html">Layanan</a>
-        <a href="dokter.html">Dokter</a>
-        <a href="berita.html">Berita</a>
-        <a href="informasi.html">Informasi</a>
-        <a href="skm.html">SKM</a>
-        <a href="diklatit.html">Diklatit</a>
-        <a href="ona_integritas.html">ona Integritas</a>
-        <a href="ppid.html">PPID</a>
-        <a href="kontak.html">Contact Us</a>
-    </div>
-</section>
-
-<!-- ================= SLIDER ================= -->
-<section class="slider">
-    <div class="slide-container">
-        
-        <!-- LEFT CONTENT -->
-<!-- ================= PROFIL RS ================= -->
-<section class="profil">
-    <div class="profil-container">
-        <h2 class="profil-title">Profil RSUD Drs. H. Amri Tambunan</h2>
-
-        <p class="profil-text">
-            RSUD Drs. H. Amri Tambunan merupakan rumah sakit milik Pemerintah Kabupaten Deli Serdang 
-            yang berkomitmen memberikan pelayanan kesehatan berkualitas, bermutu, aman, dan 
-            berorientasi pada kepuasan masyarakat. Rumah sakit ini menjadi rujukan utama masyarakat 
-            dengan pelayanan komprehensif, dokter profesional, fasilitas lengkap, dan teknologi modern.
-        </p>
-
-        <div class="profil-grid">
-            <div class="profil-box">
-                <h4>Visi</h4>
-                <p>
-                    “Mewujudkan Rumah Sakit yang Profesional, Humanis, dan Berkualitas dalam 
-                    memberikan pelayanan kesehatan kepada masyarakat.”
-                </p>
-            </div>
-
-            <div class="profil-box">
-                <h4>Misi</h4>
-                <ul>
-                    <li>Meningkatkan mutu pelayanan kesehatan.</li>
-                    <li>Mewujudkan pelayanan yang cepat, tepat, dan ramah.</li>
-                    <li>Meningkatkan profesionalisme tenaga kesehatan.</li>
-                    <li>Menyediakan sarana dan prasarana yang memadai.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-    </div>
-</section>
-
-<!-- ================= FOOTER ================= -->
-<section class="footer">
+    <!-- ================= HEADER ================= -->
+    <section class="top-header">
+        <div class="logo-area">
+    <img src="logo.png" alt="Logo RSUD" class="logo-image">
     <div>
-        📞 061-7952068 | 📱 0811 6591 949 |
-        📧 rsudhat@deliserdangkab.go.id
+        <h3>RSUD Drs. H. Amri Tambunan</h3>
     </div>
+</div>
+        <div class="navbar">
+            <a class="active" href="beranda2.html">Beranda</a>
+            <div class="dropdown">
+                <a href="#">Tentang Kami</a>
+                <div class="dropdown-content">
+                    <a href="tentang.html">Profil Rumah Sakit</a>
+                    <a href="sejarahrs.html">Sejarah Rumah Sakit</a>
+                    <a href="visimisi.html">Visi dan Misi</a>
+                    <a href="tentang.html">Filosopi dan Makna Logo</a>
+                    <a href="visimisi.html">Struktur Organisasi</a>
+                    <a href="tentang.html">Sertifikat dan Penghargaan</a>
+                    <a href="visimisi.html">Maklumat Pelayanan</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Layanan</a>
+                <div class="dropdown-content">
+                    <a href="pelayanan.html">Standar Pelayanan</a>
+                    <a href="tentang.html">Pelayanan Medis</a>
+                    <a href="visimisi.html">Pelayanan Penunjang</a>
+                    <a href="tentang.html">Pelayanan Unggulan</a>
+                    <a href="visimisi.html">Layanan Inovatif</a>
+                    <a href="tentang.html">Alur Pelayanan</a>
+                    <a href="visimisi.html">Alat Medis</a>
+                    <a href="visimisi.html">Fasilitas Lainnya</a>
+                    <a href="tentang.html">Tarif</a>
+                    <a href="visimisi.html">Jam Berkunjung</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Dokter</a>
+                <div class="dropdown-content">
+                    <a href="dokter.html">Dokter</a>
+                     <a href="dokter-spesialis.html">Dokter Spesialis</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Berita</a>
+                <div class="dropdown-content">
+                    <a href="berita.html">Artikel Kesehatan</a>
+                    <a href="brosur.html">Brosur</a>
+                    <a href="pegawai-teladan.html">Pegawai Teladan</a>
+                    <a href="poadcast.html">Podcast</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Informasi</a>
+                <div class="dropdown-content">
+                    <a href="informasi.html">SPBE</a>
+                    <a href="sippn.html">SIPPN KemenPAN-RB</a>
+                    <a href="informasi.html">Informasi Billing</a>
+                    <a href="https://rsudhat.deliserdangkab.go.id/frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a>
+                    <a href="informasi.html">Indikator Mutu Rumah Sakit</a>
+                    <a href="https://keslan.kemkes.go.id/app/siranap/tempat_tidur?kode_rs=1212012&jenis=2&propinsi=12prop&kabkota=1212">Ketersediaan Tempat Tidur</a>
+                    <a href="https://portal.deliserdangkab.go.id/">Website Pemkab Deli Serdang</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">SKM</a>
+                <div class="dropdown-content">
+                    <a href="https://sukmadeli.deliserdangkab.go.id/survey_ikm/SUtNLUM5MUFVVg">Survei Kepuasan Masyarakat</a>
+                    <a href="visimisi.html">Laporan Survei Kepuasan Masyarakat</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Diklatlit</a>
+                <div class="dropdown-content">
+                    <a href="diklatit.html">Profil Diklat</a>
+                    <a href="visimisi.html">Sertifikat Diklatlit</a>
+                    <a href="diklatit.html">Sarana Prasarana Diklatlit</a>
+                    <a href="visimisi.html">SDM Diklatlit</a>
+                    <a href="diklatit.html">Kalender Diklat</a>
+                    <a href="visimisi.html">Laporan Evaluasi Kegiatan</a>
+                    <a href="diklatit.html">Komkordik</a>
+                    <a href="visimisi.html">Galeri</a>
+                </div>
+            </div>
+             <div class="dropdown">
+                <a href="#">Zona Integritas</a>
+                <div class="dropdown-content">
+                    <a href="ona_integritas.html">WBK/WBBM</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf7d8K0-NcoDIAXe1cRv_hQ7AiEOxyII-bcDybjU_onSqu7pQ/viewform?pli=1">Whistle Blowing System</a>
+                    <a href="ona_integritas.html">Publikasi Zona Integritas</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">PPID</a>
+                <div class="dropdown-content">
+                    <a href="https://www.lapor.go.id/">Span Lapor</a>
+                    <a href="visimisi.html">Profil PPID</a>
+                    <a href="ppid.html">Visi Misi PPID</a>
+                    <a href="visimisi.html">Dasar Hukum</a>
+                    <a href="ppid.html">Struktur Organisasi</a>
+                    <a href="visimisi.html">Alur Permohonan Informasi</a>
+                    <a href="ppid.html">Alur Pengajuan Keberatan</a>
+                    <a href="visimisi.html">Alur Penyelesaian Sengketa</a>
+                    <a href="ppid.html">Formulir Permohonan Informasi</a>
+                    <a href="visimisi.html">Formulir Keberatan Informasi</a>
+                    <a href="ppid.html">SOP Pengaduan Masyarakat/a>
+                </div>
+            </div>
+            <a href="kontak.html">Contact Us</a>
+        </div>
+    </section>
+  <!-- ================= PROFIL RS ================= -->
+<section class="profil">
+  <div class="profil-container">
+    <h2 class="profil-title">Visi dan Misi</h2>
+    <div class="card">
+      <h4>Visi</h4>
+      <p>Menjadi Rumah Sakit Unggulan yang berdaya saing global dan berorientasi pada pelayanan kesehatan yang prima.</p>
+    </div>
+
+    <div class="card mission-list">
+      <h4>Misi</h4>
+      <ul>
+        <li>Meningkatkan profesionalisme sumber daya manusia melalui pendidikan, pelatihan, dan penelitian secara berkesinambungan.</li>
+        <li>Mengembangkan pelayanan unggulan untuk meningkatkan daya saing serta membangun jejaring dengan institusi lain dalam pelayanan kesehatan.</li>
+        <li>Mengedepankan rasa kemanusiaan serta pengabdian dalam melayani masyarakat.</li>
+        <li>Menyediakan sarana dalam mendidik mahasiswa fakultas kedokteran menjadi dokter yang memiliki kompetensi medik dan kepekaan sosial.</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-<script>
-// ===== Chart Data =====
-const ctx = document.getElementById("ikmChart");
 
-new Chart(ctx,{
-    type:"bar",
-    data:{
-        labels:["TW I","TW II"],
-        datasets:[{
-            label:"Nilai IKM",
-            data:[95.50,88.00],
-            backgroundColor:["#b88a00","#b88a00"]
-        }]
-    },
-    options:{
-        scales:{
-            y:{beginAtZero:true}
-        }
-    }
-});
-</script>
-
+    <!-- ================= FOOTER ================= -->
+    <section class="footer">
+        <div>📞 061-7952068 | 📱 0811 6591 949 | 📧 rsudhat@deliserdangkab.go.id</div>
+    </section>
 </body>
 </html>
